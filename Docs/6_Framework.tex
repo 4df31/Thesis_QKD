@@ -9,9 +9,31 @@ Quantum cryptography is the set of techniques or methods to distribute a secret 
 In principle, the quantum channel can be a quantum system in which the information or key string could be encoded, e.g., spin particles or photon polarization scheme. Leveraging quantum entanglement enables the distribution of the secret key. Should there be any attempt at eavesdropping, the entanglement would be disrupted.
 
 
-\subsubsection{Bell Theorem and CHSH}
+\subsection{Bell Theorem and CHSH}
 
-\subsubsection{E91}
+Bell theorem \cite{bell1964einstein} provides a incompatibility between the predictions of quantum mechanics and the existence of local hidden variable theory by  mean of inequalities, such mathematical formulation is known as Bell inequalities. In 1969 Clauser, Horne Shimony and Holt, \cite{clauser1969proposed}, stablished an extension of the bell theorem and an inequality by mean of an experminent based on the correlation of polarization of optical photons.
+
+suppose there is an esemble of particles with observables $a$, $b$ that can be measured with analyzers which give two possible results $A(a),B(b)=\pm 1$. Lets define a correlation function based on the statistical correlation of the measurements as 
+
+\begin{equation}\label{eqn:correlation_function_CHSH}
+E(a,b)\,=\,P_{+}(a)P_{+}(b) + P_{-}(a)P_{-}(b) - P_{-}(a)P_{+}(b) - P_{+}(a)P_{-}(b) \quad \in \left[-1,1\right]
+\end{equation}
+where $P_{\pm}(a)$ and $P_{\pm}(b)$ are the probabilities of obtaining $\pm1$ from $A(a)$ and $B(b)$.
+
+by defining a quantity $S$ as
+
+\begin{equation}\label{eqn:S_quantity_CHSH}
+S\,=\,E(a,b) - E(a,b') + E(a',b) + E(a',b')
+\end{equation}
+
+for features $a'$ and $b'$, but, by\ref{eqn:correlation_function_CHSH} the expected value is bounded by 
+
+\begin{equation}\label{eqn:CHSH_inequality}
+\left\vert \left\langle S \right\rangle\right\vert\,\leq\,2
+\end{equation}
+
+
+\subsection{E91}
 
 Cite Ekerd 1991 \cite{ekert1991quantum} and futher work (implementation and alternatives like EPR states into the ekert protocol)
 
